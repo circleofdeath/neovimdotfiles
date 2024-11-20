@@ -1,0 +1,23 @@
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<C-p>",      builtin.find_files, {})
+vim.keymap.set("n", "<leader>df", builtin.live_grep,  {})
+
+vim.keymap.set("n", "<C-k>", ":Neotree filesystem toggle right<CR>:Neotree filesystem toggle right<CR>", { silent = true })
+vim.keymap.set("n", "<C-o>", ":Neotree filesystem reveal right<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format,      { silent = true })
+vim.keymap.set("n", "K",          vim.lsp.buf.hover,       { silent = true })
+vim.keymap.set("n", "d",          vim.lsp.buf.definition,  { silent = true })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { silent = true })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename,      { silent = true })
+vim.keymap.set("n", "g",          vim.lsp.buf.references,  { silent = true })
+
+vim.keymap.set("n", "<F1><F1>", ":lua require(\"barbecue.ui\").navigate(-1)<CR>", { silent = true })
+vim.keymap.set("n", "<F1><F2>", ":lua require(\"barbecue.ui\").navigate(-2)<CR>", { silent = true })
+vim.keymap.set("n", "<F2><F1>", ":Noice dismiss<CR>", { silent = true })
+vim.keymap.set("i", "<F3><F1>", "<Esc>:", {})
+vim.keymap.set("n", "<F3><F1>", ":", {})
+vim.keymap.set("n", "<F4><F4>", ":nohlsearch<CR>", { silent = true })
+vim.keymap.set("n", "<F4><F1>", ":bp<CR>", { silent = true })
+vim.keymap.set("n", "<F4><F2>", ":bn<CR>", { silent = true })
+vim.keymap.set("n", "<F4><F3>", ":bd!<CR>:bn<CR>", { silent = true })
